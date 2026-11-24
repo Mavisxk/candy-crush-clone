@@ -1,0 +1,24 @@
+{
+  "id": "/",
+  "name": "Hawker Crush",
+  "short_name": "Hawker Crush",
+  "description": "A match-3 game with Singapore hawker food. Match chilli crab, satay and kaya toast across eight famous hawker centres.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1c6b5a",
+  "theme_color": "#14574a",
+  "lang": "en-SG",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "screenshots": [
+    { "src": "/screenshots/title.png", "sizes": "780x1328", "type": "image/png", "form_factor": "narrow", "label": "Title screen" },
+    { "src": "/screenshots/gameplay.png", "sizes": "780x1328", "type": "image/png", "form_factor": "narrow", "label": "Matching hawker food on the board" }
+  ]
+}

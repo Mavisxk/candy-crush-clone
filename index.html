@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#14574a">
+<meta name="description" content="Hawker Crush: a match-3 game with Singapore hawker food. Match chilli crab, satay and kaya toast across eight hawker centres.">
+<title>Hawker Crush</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Hawker Crush">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preload" href="/fonts/baloo-2-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="app">
+  <section class="screen active" id="title">
+    <div class="sign"><h1>Hawker<br>Crush</h1><p>Makan · Match · Shiok</p></div>
+    <div id="parade"></div>
+    <p class="blurb">Match chilli crab, satay and kaya toast across eight famous Singapore hawker centres.</p>
+    <div class="title-actions">
+      <button class="btn" data-a="play">Play</button>
+      <div class="row"><button class="iconbtn" data-t="sfx"></button><button class="iconbtn" data-t="music"></button><button class="btn ghost" data-a="help" style="font-size:16px;min-height:44px;padding:8px 18px">How to play</button></div>
+      <button class="btn ghost install" id="installBtn" hidden>Install app</button>
+    </div>
+  </section>
+
+  <section class="screen" id="map">
+    <div class="topbar">
+      <button class="iconbtn" data-a="title" aria-label="Back to title"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <h2>Hawker trail</h2>
+      <span class="startotal" aria-label="Stars collected"><svg viewBox="0 0 100 100" width="20" height="20"><path d="M50 6 L62 36 L94 38 L69 58 L78 90 L50 72 L22 90 L31 58 L6 38 L38 36Z" fill="#ffd23f" stroke="#c98a00" stroke-width="6" stroke-linejoin="round"/></svg><span id="starTotal">0</span></span>
+      <button class="iconbtn" data-t="music"></button>
+    </div>
+    <div id="mapScroll"><div id="stalls"></div></div>
+  </section>
+
+  <section class="screen" id="game">
+    <div class="hud-top">
+      <button class="iconbtn" data-a="pause" aria-label="Pause menu"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></button>
+      <h2 id="lvlName">Level</h2>
+      <button class="iconbtn" data-t="sfx"></button>
+    </div>
+    <div class="hud">
+      <div class="movesbox"><small>Moves</small><span id="moves">0</span></div>
+      <div id="goals"></div>
+      <div class="scorebox"><small>Score</small><div id="score">0</div></div>
+      <div class="meter"><div id="bar"></div><div id="ticks"><i></i><i></i><i></i></div></div>
+    </div>
+    <div id="boardWrap"><canvas id="board"></canvas></div>
+    <p id="boosterHint" aria-live="polite"></p>
+    <div id="boosters"></div>
+  </section>
+</div>
+<div id="modal" role="dialog" aria-modal="true"><div id="modalCard"></div></div>
+<script src="/js/art.js" defer></script>
+<script src="/js/game.js" defer></script>
+<script src="/js/ui.js" defer></script>
+<script src="/js/pwa.js" defer></script>
+</body>
+</html>
